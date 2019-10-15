@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+
+  <form action="submit" method="post">
+        {% csrf_token %}
+        <p>Language :
+            <select name="language">
+              <option value="C">C</option>
+              <option value="C++">C++</option>
+              <option value="Java">Java</option>
+            </select>
+        </p>
+        <textarea name="code" rows="30" cols="60">{{code}}</textarea>
+        <textarea name="input" rows="30" cols="40">{{input}}</textarea>
+        <textarea rows="30" cols="30">{{output}}</textarea>
+        <textarea rows="30" cols="30">{{seconds}}</textarea>
+        <br>
+        <input type="submit" value="submit">
+  </form>
+</body>
+</html>
+
+
